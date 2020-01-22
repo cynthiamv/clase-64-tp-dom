@@ -1,28 +1,11 @@
 //VARIABLES
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap');
-$primary_font: "Montserrat",
-sans-serif;
 
-$primary_font_color: #000;
-$secondary_font_color: #FFF;
+@import "variables";
+@import "mixins";
 
-$primary_color:#1a75bc;
-$secondary_color:#fdb44b;
-
-$font-size: 14px;
-
-@mixin button_style {
-    background-color: $primary_color;
-    border: 1px solid $secondary_font_color;
-    padding: 5px;
-    border-radius: 6px;
-    color: $secondary_font_color;
-}
-
-// )
 * {
     box-sizing: border-box;
-
 }
 
 body {
@@ -30,8 +13,7 @@ body {
     font-family: $primary_font;
 
     nav {
-        background-color: $primary_color;
-        color: $secondary_font_color;
+        @include primary_colors;
         display: flex;
         justify-content: space-between;
         padding: 15px 20px;
@@ -44,8 +26,7 @@ body {
     }
 
     .main {
-        display: flex;
-        justify-content: center;
+        @include align_justify_center;
         margin: 20px 0;
 
         .main-container {
@@ -86,37 +67,31 @@ body {
         }
     }
 
-
-}
-
-
-footer {
-    background-color: $secondary_color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 35px 0 20px 0;
-    bottom: 0;
-    width: 100%;
-
-    .icons-social {
-        width: 100px;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .footer-text {
+    footer {
+        background-color: $secondary_color;
+        @include align_justify_center;
+        flex-direction: column;
+        padding: 35px 0 20px 0;
+        bottom: 0;
         width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
 
+        .icons-social {
+            width: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer-text {
+            width: 100%;
+            @include align_justify_center;
+        }
+    }
+
+}
 
 .card-section {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    @include align_justify_center;
     margin: 60px 0;
 
     .cards-container {
@@ -126,7 +101,6 @@ footer {
         align-content: center;
         flex-wrap: wrap;
 
-
         .card {
             display: flex;
             width: 420px;
@@ -135,11 +109,9 @@ footer {
             box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
             // border-radius: 6px; no funciona
 
-
             .card-info {
-                background-color: $primary_color;
+                @include primary_colors;
                 padding: 0 8px;
-                color: $secondary_font_color;
 
                 .openModal {
                     @include button_style;
@@ -163,60 +135,63 @@ footer {
 
 
 #modal-cats {
-    display: flex;
-    justify-content: center;
+    @include align_justify_center;
     width: 100%;
     height: 100%;
-
-}
-
-#modal-content {
-    width: 400px;
-    height: 500px;
-    position: fixed;
-    top: 30px;
-    left: 450px;
-}
-
-.modal-info {
-    display: flex;
-    flex-direction: column;
-    background-color: $secondary_color;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
-
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h1 {
-            color: $secondary_font_color;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-        }
-
-        p {
-            font-size: $font-size;
-        }
-    }
-
-    .button-container {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-
+    #modal-content {
+        width: 400px;
+        height: 500px;
+        position: fixed;
+        top: 30px;
+        left: 450px;
+        .modal-info {
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary_color;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
         
+            .info {
+                @include align_justify_center;
+                flex-direction: column;
+        
+        
+                h1 {
+                    color: $primary_font_color;
+                }
+        
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+        
+                p {
+                    font-size: $font-size;
+                }
+            }
+        
+            .button-container {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
     }
 }
+
 #cerrarModal {
     background-color: $secondary_color;
-    color: $secondary_font_color;
+    color: $primary_font_color;
     border: none;
     font-size: 18px;
 }
+
 .hidden {
     display: none;
+}
+
+// ANIMACIONES
+.hover-card {
+    background-color:#fdb44b;
 }

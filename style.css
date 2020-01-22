@@ -16,6 +16,7 @@ body {
       margin: 0; }
   body .main {
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 20px 0; }
     body .main .main-container {
@@ -41,27 +42,29 @@ body {
         body .main .main-container .main-image img {
           width: 100%;
           height: 100%; }
-
-footer {
-  background-color: #fdb44b;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 35px 0 20px 0;
-  bottom: 0;
-  width: 100%; }
-  footer .icons-social {
-    width: 100px;
+  body footer {
+    background-color: #fdb44b;
     display: flex;
-    justify-content: space-around; }
-  footer .footer-text {
-    width: 100%;
-    display: flex;
-    justify-content: center; }
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 35px 0 20px 0;
+    bottom: 0;
+    width: 100%; }
+    body footer .icons-social {
+      width: 100px;
+      display: flex;
+      justify-content: space-around; }
+    body footer .footer-text {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
 
 .card-section {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 60px 0; }
   .card-section .cards-container {
@@ -78,8 +81,8 @@ footer {
       box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6); }
       .card-section .cards-container .card .card-info {
         background-color: #1a75bc;
-        padding: 0 8px;
-        color: #FFF; }
+        color: #FFF;
+        padding: 0 8px; }
         .card-section .cards-container .card .card-info .openModal {
           background-color: #1a75bc;
           border: 1px solid #FFF;
@@ -96,39 +99,39 @@ footer {
 
 #modal-cats {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%; }
-
-#modal-content {
-  width: 400px;
-  height: 500px;
-  position: fixed;
-  top: 30px;
-  left: 450px; }
-
-.modal-info {
-  display: flex;
-  flex-direction: column;
-  background-color: #fdb44b;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6); }
-  .modal-info .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .modal-info .info h1 {
-      color: #FFF; }
-    .modal-info .info img {
-      width: 200px;
-      height: 200px; }
-    .modal-info .info p {
-      font-size: 14px; }
-  .modal-info .button-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; }
+  #modal-cats #modal-content {
+    width: 400px;
+    height: 500px;
+    position: fixed;
+    top: 30px;
+    left: 450px; }
+    #modal-cats #modal-content .modal-info {
+      display: flex;
+      flex-direction: column;
+      background-color: #fdb44b;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6); }
+      #modal-cats #modal-content .modal-info .info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+        #modal-cats #modal-content .modal-info .info h1 {
+          color: #FFF; }
+        #modal-cats #modal-content .modal-info .info img {
+          width: 200px;
+          height: 200px; }
+        #modal-cats #modal-content .modal-info .info p {
+          font-size: 14px; }
+      #modal-cats #modal-content .modal-info .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; }
 
 #cerrarModal {
   background-color: #fdb44b;
@@ -138,3 +141,6 @@ footer {
 
 .hidden {
   display: none; }
+
+.hover-card {
+  background-color: #fdb44b; }
