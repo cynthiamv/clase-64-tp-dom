@@ -1,0 +1,205 @@
+//VARIABLES
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap');
+$primary_font: "Montserrat",
+sans-serif;
+
+$primary_font_color: #000;
+$secondary_font_color: #FFF;
+
+$primary_color:#1a75bc;
+$secondary_color:#fdb44b;
+
+$font-size: 14px;
+
+@mixin button_style {
+    background-color: $primary_color;
+    border: 1px solid $secondary_font_color;
+    padding: 5px;
+    border-radius: 6px;
+    color: $secondary_font_color;
+}
+
+// )
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: $primary_font;
+
+    nav {
+        background-color: $primary_color;
+        color: $secondary_font_color;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+
+        h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        .main-container {
+            width: 90%;
+            display: flex;
+
+            .text-content {
+                width: 55%;
+                background-color: $secondary_color;
+                padding: 0 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h1 {
+                    color: $primary_color;
+                }
+
+                h3 {
+                    color: rgb(139, 126, 126);
+                    font-size: $font-size;
+                }
+
+                p {
+                    line-height: 1.6;
+                    font-size: $font-size;
+                }
+            }
+
+            .main-image {
+                width: 45%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+footer {
+    background-color: $secondary_color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 0 20px 0;
+    bottom: 0;
+    width: 100%;
+
+    .icons-social {
+        width: 100px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footer-text {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+
+    .cards-container {
+        width: 65%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+
+
+        .card {
+            display: flex;
+            width: 420px;
+            height: 200px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
+            // border-radius: 6px; no funciona
+
+
+            .card-info {
+                background-color: $primary_color;
+                padding: 0 8px;
+                color: $secondary_font_color;
+
+                .openModal {
+                    @include button_style;
+                }
+            }
+
+            .card-image {
+                width: 550px;
+                height: auto;
+                overflow: hidden;
+
+                .cat-image {
+                    width: 250px;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+
+#modal-cats {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+#modal-content {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 30px;
+    left: 450px;
+}
+
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary_color;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    p {
+        font-size: $font-size;
+    }
+
+    #cerrarModal {
+        @include button_style;
+    }
+}
+
+.hidden {
+    display: none;
+}
