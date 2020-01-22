@@ -55,6 +55,8 @@ body {
       width: 100px;
       display: flex;
       justify-content: space-around; }
+      body footer .icons-social a {
+        color: #000; }
     body footer .footer-text {
       width: 100%;
       display: flex;
@@ -89,13 +91,18 @@ body {
           padding: 5px;
           border-radius: 6px;
           color: #FFF; }
+      .card-section .cards-container .card .hover-card {
+        background-color: #fdb44b !important; }
+      .card-section .cards-container .card .hover-image {
+        transform: scale(1.3); }
       .card-section .cards-container .card .card-image {
         width: 550px;
         height: auto;
         overflow: hidden; }
         .card-section .cards-container .card .card-image .cat-image {
           width: 250px;
-          height: 100%; }
+          height: 100%;
+          transition: all 1s; }
 
 #modal-cats {
   display: flex;
@@ -141,6 +148,3 @@ body {
 
 .hidden {
   display: none; }
-
-.hover-card {
-  background-color: #fdb44b; }

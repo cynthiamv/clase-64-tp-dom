@@ -53,14 +53,24 @@ for (let i = 0; i < gatos.length; i++) {
 
 }
 
-// ANIMACION QUE NO FUNCIONA
+
 const card = document.querySelectorAll(".card")
-console.log(card)
-const cardText = document.querySelectorAll(".card-info")
-card.onmouseenter = () => {
-    console.log("funciona")
-    cardText.classList.add("hover-card")
+const cardText = document.getElementsByClassName("card-info")
+const cardImage = document.getElementsByClassName("cat-image")
+for (let k = 0; k < card.length; k++) {
+    card[k].onmouseenter = (e) => {
+        e.preventDefault()
+        cardText[k].classList.add("hover-card")
+        cardImage[k].classList.add("hover-image")
+    }
+    card[k].onmouseleave = (e) => {
+        e.preventDefault()
+        cardText[k].classList.remove("hover-card")
+        cardImage[k].classList.remove("hover-image")
+    }
+    
 }
+
 
 
 const cardList = document.querySelectorAll(".openModal")
