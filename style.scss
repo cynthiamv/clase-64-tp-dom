@@ -172,7 +172,7 @@ footer {
 
 #modal-content {
     width: 400px;
-    height: 300px;
+    height: 500px;
     position: fixed;
     top: 30px;
     left: 450px;
@@ -181,25 +181,42 @@ footer {
 .modal-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: $secondary_color;
     padding: 15px;
     border-radius: 6px;
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
-    img {
-        width: 200px;
-        height: 200px;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color: $secondary_font_color;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        p {
+            font-size: $font-size;
+        }
     }
 
-    p {
-        font-size: $font-size;
-    }
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
 
-    #cerrarModal {
-        @include button_style;
+        
     }
 }
-
+#cerrarModal {
+    background-color: $secondary_color;
+    color: $secondary_font_color;
+    border: none;
+    font-size: 18px;
+}
 .hidden {
     display: none;
 }

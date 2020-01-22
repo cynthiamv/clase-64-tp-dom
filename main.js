@@ -62,21 +62,25 @@ for (let j = 0; j < cardList.length; j++) {
         modalContent.innerHTML =
             `
                 <div class="modal-info">
-                    <h1>${gatos[j].name}</h1>
-                     <img src="${gatos[j].img}"/>
-                     <p>${gatos[j].longDesc}</p>
-                     <button id="cerrarModal">Cerrar Modal</button>
-        </div>`
+                    <div class="button-container">
+                        <button id="cerrarModal"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="info">
+                        <h1>${gatos[j].name}</h1>
+                        <img src="${gatos[j].img}"/>
+                        <p>${gatos[j].longDesc}</p>
+                    </div>
+                </div>
+        `
 
         
         modalContent.classList.remove("hidden")
 
         const botonCerrarModal = document.getElementById("cerrarModal")
         botonCerrarModal.onclick = () => {
-            modalContent.classList.add("hidden")
+            modalContent.classList.add('hidden')
         }   
     }
-    
 
 }
 
