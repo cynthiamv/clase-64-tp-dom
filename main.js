@@ -68,7 +68,7 @@ for (let k = 0; k < card.length; k++) {
         cardText[k].classList.remove("hover-card")
         cardImage[k].classList.remove("hover-image")
     }
-    
+
 }
 
 
@@ -93,15 +93,35 @@ for (let j = 0; j < cardList.length; j++) {
                 </div>
         `
 
-        
+
         modalContent.classList.remove("hidden")
+        modalContent.classList.add('position')
 
         const botonCerrarModal = document.getElementById("cerrarModal")
         botonCerrarModal.onclick = () => {
             modalContent.classList.add('hidden')
-        }   
+        }
     }
 
 }
 
 
+const form = document.querySelector('form')
+
+
+form.onsubmit = e => {
+    const nombreUsuario = document.querySelector("#nombre-usuario");
+    const telefonoUsuario = document.querySelector("#telefono-usuario");
+
+    const errorNombre = document.querySelector(".error-nombre")
+    const errorTelefono = document.querySelector(".error-telefono")
+    
+    e.preventDefault();
+
+    if (nombreUsuario.value == 0) {
+        errorNombre.innerHTML = `<p>Debes ingresar tu nombre</p>`
+    } 
+    if (telefonoUsuario.value == 0) {
+        errorTelefono.innerHTML = `<p>Debes ingresar tu telefono</p>`
+    }
+}

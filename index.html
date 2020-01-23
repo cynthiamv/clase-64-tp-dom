@@ -31,6 +31,48 @@
         </div>
     </section>
 
+    <section class="form-section">
+
+        <div class="form-text">
+            <h2>¿Querés adoptar un gato? </h2>
+            <p> Gracias por tu interes en adoptar uno de nuestros gatos. Por favor completa el siguiente formulario
+                y
+                nos
+                pondremos en contacto con vos.</p>
+        </div>
+
+        <form action="" method="get">
+            <fieldset>
+                <label class="label margin-b">Datos de contacto</label>
+                <input type="text" name="nombre" id="nombre-usuario" placeholder="Nombre">
+                <label class="error-nombre"></label>
+                <input type="number" name="telefono" id="telefono-usuario" placeholder="Telefono">
+                <label class="error-telefono"></label>
+            </fieldset>
+            <fieldset>
+                <label class="label margin-b">Características del gato</label>
+                <label class="label margin-b label-car">Color de pelaje</label>
+                <label class="color label-opc"><input type="checkbox" name="color" id="color-pelaje">Negro</label>
+                <label class="color label-opc"><input type="checkbox" name="color" id="color-pelaje">Blanco</label>
+                <label class="color label-opc"><input type="checkbox" name="color" id="color-pelaje">Gris</label>
+                <label class="color label-opc"><input type="checkbox" name="color" id="color-pelaje">Naranja</label>
+                <label class="color label-opc"><input type="checkbox" name="color" id="color-pelaje">Amarillo</label>
+
+            </fieldset>
+            <fieldset>
+                <label class="label margin-b label-car">Sexo</label>
+                <label class="sexo label-opc"><input type="radio" name="sexo" id="sexo">Femenino</label>
+                <label class="sexo label-opc"><input type="radio" name="sexo" id="sexo">Masculino</label>
+                <label class="sexo label-opc"><input type="radio" name="sexo" id="sexo">Indistinto</label>
+
+            </fieldset>
+            <fieldset class="btn-container">
+                <input type="submit" value="Enviar" id="btn-submit">
+            </fieldset>
+
+        </form>
+
+    </section>
     <section class="card-section">
         <div class="cards-container"></div>
     </section>
