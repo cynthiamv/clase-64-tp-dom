@@ -74,16 +74,27 @@ body {
         align-items: center;
         background-image: url(images/form-section-bg.jpg);
         background-size: cover;
+        position: relative;
 
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: #eeaa2d;
+            opacity: .7;
+            position: absolute;
+            
+        }
         .form-text {
             width: 50%;
             text-align: center;
             padding: 20px;
+            color: #FFF;
+            z-index: 1;
         }
 
         form {
             width: 40%;
-            background-color: rgba(72, 72, 72, 0.4);
+            background-color: $primary_color;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -233,6 +244,13 @@ body {
                 .openModal {
                     @include button_style;
                 }
+                .openModal:hover {
+                    background-color: #FFF;
+                    color: $primary_color;
+                    cursor: pointer;
+                    border: 1px solid $primary_color;
+                }
+
             }
 
             .hover-card {
