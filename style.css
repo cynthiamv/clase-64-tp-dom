@@ -66,8 +66,8 @@ body {
       width: 40%;
       background-color: #1a75bc;
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
       color: #FFF;
       padding: 30px 50px;
       border-radius: 7px;
@@ -78,8 +78,6 @@ body {
         display: flex; }
         body .form-section form fieldset .label-car {
           font-size: 14px; }
-        body .form-section form fieldset .label-opc {
-          font-size: 12px; }
         body .form-section form fieldset #nombre-usuario,
         body .form-section form fieldset #telefono-usuario {
           width: 95%;
@@ -89,9 +87,7 @@ body {
           margin-bottom: 15px;
           background-color: rgba(72, 72, 72, 0.4);
           color: #FFF; }
-        body .form-section form fieldset #nombre-usuario::placeholder {
-          color: #FFF; }
-        body .form-section form fieldset #telefono-usuario::placeholder {
+        body .form-section form fieldset #nombre-usuario::placeholder, body .form-section form fieldset #telefono-usuario::placeholder {
           color: #FFF; }
         body .form-section form fieldset #telefono-usuario::-webkit-outer-spin-button,
         body .form-section form fieldset #telefono-usuario::-webkit-inner-spin-button {
@@ -101,7 +97,8 @@ body {
           margin-bottom: 15px; }
         body .form-section form fieldset .label-opc {
           display: flex;
-          align-items: center; }
+          align-items: center;
+          font-size: 12px; }
           body .form-section form fieldset .label-opc #color-pelaje,
           body .form-section form fieldset .label-opc #sexo {
             width: 16px;
@@ -209,6 +206,7 @@ body {
     #modal-cats #modal-content .modal-info {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       background-color: #fdb44b;
       padding: 15px;
       border-radius: 6px;

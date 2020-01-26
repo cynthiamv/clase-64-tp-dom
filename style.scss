@@ -37,9 +37,7 @@ body {
                 width: 55%;
                 background-color: $secondary_color;
                 padding: 0 30px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+                @include column_center;
 
                 h1 {
                     color: $primary_color;
@@ -88,17 +86,15 @@ body {
             width: 50%;
             text-align: center;
             padding: 20px;
-            color: #FFF;
+            color: $primary_font_color;
             z-index: 1;
         }
 
         form {
             width: 40%;
             background-color: $primary_color;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            color: #FFF;
+            @include column_center;
+            color: $primary_font_color;
             padding: 30px 50px;
             border-radius: 7px;
             z-index: 2;
@@ -112,10 +108,6 @@ body {
                     font-size: 14px;
                 }
 
-                .label-opc {
-                    font-size: 12px;
-                }
-
                 #nombre-usuario,
                 #telefono-usuario {
 
@@ -125,16 +117,11 @@ body {
                     border-radius: 3px;
                     margin-bottom: 15px;
                     background-color: rgba(72, 72, 72, 0.4);
-                    color: #FFF;
-
+                    color: $primary_font_color;
                 }
 
-                #nombre-usuario::placeholder {
-                    color: #FFF;
-                }
-
-                #telefono-usuario::placeholder {
-                    color: #FFF;
+                #nombre-usuario::placeholder, #telefono-usuario::placeholder {
+                    color: $primary_font_color;
                 }
 
                 #telefono-usuario::-webkit-outer-spin-button,
@@ -150,13 +137,13 @@ body {
                 .label-opc {
                     display: flex;
                     align-items: center;
+                    font-size: 12px;
 
                     #color-pelaje,
                     #sexo {
                         width: 16px;
                         height: 16px;
                         cursor: pointer;
-
                     }
                 }
 
@@ -288,14 +275,12 @@ body {
     #modal-content {
         width: 400px;
         height: 500px;
-        position: fixed;
-        
+        position: fixed;       
         top: 30px;
         left: 450px;
 
         .modal-info {
-            display: flex;
-            flex-direction: column;
+            @include column_center;
             background-color: $secondary_color;
             padding: 15px;
             border-radius: 6px;
@@ -304,7 +289,6 @@ body {
             .info {
                 @include align_justify_center;
                 flex-direction: column;
-
 
                 h1 {
                     color: $primary_font_color;
